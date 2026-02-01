@@ -2,10 +2,6 @@ import SwiftUI
 import Helpers
 import Flow
 
-#if os(macOS)
-#error("macOS not currently supported")
-#endif
-
 /// A picker for selecting from multiple options.
 ///
 /// A MultiPicker can be initialized with several configurations, depending on what kind of binding is passed into the initializer. It can be configured to select between...
@@ -345,6 +341,7 @@ struct MultiPicker_Previews: PreviewProvider {
         multiPickerListPreview()
             .previewDisplayName("List Style")
 
+        #if !os(macOS)
         multiPickerNavigationLinkPreview()
             .previewDisplayName("Navigation Link Style Plain Style Choice")
 
@@ -353,6 +350,7 @@ struct MultiPicker_Previews: PreviewProvider {
 
         multiPickerNavigationLinkCustomChoicePreview()
             .previewDisplayName("Navigation Link Style Custom Style Choice")
+        #endif
     }
 
     static func multiPickerListPreview() -> some View {
@@ -395,6 +393,7 @@ struct MultiPicker_Previews: PreviewProvider {
         }
     }
 
+    #if !os(macOS)
     static func multiPickerNavigationLinkPreview() -> some View {
         NavigationStack {
             PreviewBindingHelper4(values: (["1", "2", "3"], "1", Optional<String>("1"), Set(arrayLiteral: "1") as Set<String>)) { (choices: Binding<[String]>, oneSelection: Binding<String>, oneOrNoneSelection: Binding<String?>, multiSelection: Binding<Set<String>>) in
@@ -581,5 +580,6 @@ struct MultiPicker_Previews: PreviewProvider {
             }
         }
     }
+    #endif
 }
 #endif
