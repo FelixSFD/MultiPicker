@@ -33,7 +33,7 @@ public struct MultiPicker<Label: View, SelectionValue: Hashable, Content: View>:
                         #endif
                         ToolbarItem(placement: toolbarPlacement) {
                             label
-                                .backport.bold()
+                                .bold()
                         }
                     }
             } label: {
