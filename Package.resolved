@@ -1,5 +1,5 @@
 {
-  "originHash" : "d3da8087b089ee2ae7f60875b46ff30e3f7e8f1681496872f38f47013d98acdf",
+  "originHash" : "b7147a833df59c1715cccf58b26f291786be88537dbd966f8659b4794fcb700b",
   "pins" : [
     {
       "identity" : "flow",
@@ -13,10 +13,10 @@
     {
       "identity" : "helpers",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/FelixSFD/Helpers.git",
+      "location" : "https://github.com/toastersocks/Helpers.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "c422c784753741434e2ce8de5180ea585f548066"
+        "revision" : "05bbf887ec0b235c14be6d13de61a04fc65a1ddc",
+        "version" : "1.0.1"
       }
     }
   ],
